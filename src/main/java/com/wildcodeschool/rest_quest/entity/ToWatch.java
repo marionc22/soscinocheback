@@ -12,9 +12,9 @@ public class ToWatch {
     private Long id;
 
     private String username;
-    private long movieId;
+
     @ManyToOne
-    @JoinColumn(name = "movieId", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "movieId")
     private Movie movie;
 
 
@@ -30,8 +30,8 @@ public class ToWatch {
     public Movie getMovie() {
         return movie;
     }
-    public void setMovie(Movie movie) {
-        this.movie = movie;
+    public void setMovieId(Movie movieId) {
+        this.movie = movieId;
     }
 
 

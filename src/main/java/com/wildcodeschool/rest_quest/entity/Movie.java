@@ -1,9 +1,6 @@
 package com.wildcodeschool.rest_quest.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Movie {
@@ -15,7 +12,7 @@ public class Movie {
     private String title;
 
     private String director;
-
+@Column(length=1000)
     private String description;
 
     private String image;

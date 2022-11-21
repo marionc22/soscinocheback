@@ -3,6 +3,7 @@ package com.wildcodeschool.rest_quest.controller;
 
 import com.wildcodeschool.rest_quest.entity.Movie;
 import com.wildcodeschool.rest_quest.entity.Watched;
+import com.wildcodeschool.rest_quest.repository.MovieRepository;
 import com.wildcodeschool.rest_quest.repository.WatchedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -32,10 +33,9 @@ public class WatchedController {
 
     @RequestMapping(value = "/watched", method = RequestMethod.POST)
     private String postWatched(@RequestBody Watched watched) {
-        Watched watcheed = watchedRepository.save(watched);
+        watchedRepository.save(watched);
         return "redirect:/watched";
     }
-
 
 
 

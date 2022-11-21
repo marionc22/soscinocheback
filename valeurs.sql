@@ -20,7 +20,10 @@ INSERT INTO `movie` (`title`, `director`, `description`, `image`) VALUES ('La co
 CREATE TABLE `watched`(
   `id`INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`id`));
+    PRIMARY KEY (`id`),
+     FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+    );
+    );
 
   CREATE TABLE `toWatch`(
   `id`INT NOT NULL AUTO_INCREMENT,

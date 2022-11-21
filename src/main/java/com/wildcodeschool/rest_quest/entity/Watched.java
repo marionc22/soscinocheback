@@ -1,5 +1,6 @@
 package com.wildcodeschool.rest_quest.entity;
 
+import com.wildcodeschool.rest_quest.repository.MovieRepository;
 import com.wildcodeschool.rest_quest.repository.WatchedRepository;
 
 import javax.persistence.*;
@@ -16,11 +17,16 @@ public class Watched {
     @Column(name = "username")
     private String username;
 
-   @ManyToOne
-   @JoinColumn(name = "movieId" , nullable = false , insertable = false, updatable = false)
+     @ManyToOne(fetch=FetchType.EAGER)
+   @JoinColumn(name = "movieId")
     private Movie movie;
 
     public Watched() {
+    }
+
+    public Watched(String username, Movie movie) {
+        this.username=username;
+        this.movie=movie;
     }
 
     public Long getId(){
