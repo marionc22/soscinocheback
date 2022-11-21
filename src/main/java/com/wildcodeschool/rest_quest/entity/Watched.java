@@ -23,7 +23,12 @@ public class Watched {
     public Watched() {
     }
 
-
+    public Long getId(){
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
     public Movie getMovie() {
         return movie;
     }
@@ -31,15 +36,9 @@ public class Watched {
         this.movie = movie;
     }
 
-    public Long getId(Long id){
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public String getUsername(String username){
+    public String getUsername(){
         return username;
     }
 

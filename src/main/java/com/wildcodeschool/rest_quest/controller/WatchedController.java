@@ -18,7 +18,7 @@ public class WatchedController {
    WatchedRepository watchedRepository;
 
     @GetMapping("/watched")
-    public List<Watched> index(){
+    public List<Watched> watchedindex(){
 
         return watchedRepository.findAll();
     }
