@@ -21,19 +21,31 @@ public class ToWatch {
     public ToWatch() {
     }
 
+    public Long getId(){
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
     public Movie getMovie() {
         return movie;
     }
-
     public void setMovie(Movie movie) {
         this.movie = movie;
     }
 
-    public ToWatch(String username, long movieId) {
-        this.username = username;
-        this.movieId = movieId;
+
+
+    public String getUsername(){
+        return username;
     }
 
-    ;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
+
+
 }
 
