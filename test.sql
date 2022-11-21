@@ -1,0 +1,1 @@
+INSERT INTO `watched` (`username`, `movieId`) VALUES  ('reyducul',  1 );
