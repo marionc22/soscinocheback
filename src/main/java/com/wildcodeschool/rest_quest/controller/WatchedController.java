@@ -37,6 +37,13 @@ public class WatchedController {
         return "redirect:/watched";
     }
 
+    @DeleteMapping("watched/{id}")
+    public boolean delete(@PathVariable Long id) {
+
+        watchedRepository.deleteById(id);
+        return true;
+    }
+
 
 
 }
