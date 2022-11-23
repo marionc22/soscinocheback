@@ -42,8 +42,6 @@ public class Watched {
         this.movie = movie;
     }
 
-
-
     public String getUsername(){
         return username;
     }
